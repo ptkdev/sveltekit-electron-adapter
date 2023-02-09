@@ -135,27 +135,6 @@ See https://kit.svelte.dev/docs/page-options#prerender for more details`
         });
       });
 
-      let regex_input = new RegExp(`</body>`, "g");
-      let regex_replace = `<script defer src="renderer.js"></script></body>`;
-
-      await replace.sync({
-        files: [pages + "/**/*.html"],
-        // @ts-ignore
-        processor: (input) => input.replace(regex_input, regex_replace),
-      });
-
-      regex_input = new RegExp(
-        `http-equiv="content-security-policy" content=""`,
-        "g"
-      );
-      regex_replace = `http-equiv="content-security-policy" content="default-src 'self' http://localhost:5000 'unsafe-eval' 'unsafe-inline';"`;
-
-      await replace.sync({
-        files: [pages + "/**/*.html"],
-        // @ts-ignore
-        processor: (input) => input.replace(regex_input, regex_replace),
-      });
-
       if (fallback) {
         builder.generateFallback(path.join(pages, fallback));
       }
