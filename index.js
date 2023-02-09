@@ -136,9 +136,7 @@ See https://kit.svelte.dev/docs/page-options#prerender for more details`
         filesOnly: true,
       });
 
-      HTML_assets.forEach(async (path) => {
-        let href = "/" + path;
-
+      HTML_assets.forEach(async () => {
         let regex_input = new RegExp(`[^.](/_app/immutable)`, "g");
         let regex_replace = `"./_app/immutable`;
 
@@ -147,6 +145,22 @@ See https://kit.svelte.dev/docs/page-options#prerender for more details`
           // @ts-ignore
           processor: (input) => input.replace(regex_input, regex_replace),
         });
+      });
+
+      regex_input = new RegExp(
+        `name="viewport" content="width=device-width"`,
+        "g"
+      );
+      const viewport =
+        "width=device-width, initial-scale=1.0, viewport-fit=cover";
+      regex_replace = `name="viewport" content="${
+        options?.viewport ? options.viewport : viewport
+      }"`;
+
+      await replace.sync({
+        files: [pages + "/**/*.html"],
+        // @ts-ignore
+        processor: (input) => input.replace(regex_input, regex_replace),
       });
 
       if (fallback) {

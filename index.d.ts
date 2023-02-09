@@ -7,6 +7,7 @@ export interface AdapterOptions {
   precompress?: boolean;
   strict?: boolean;
   policy?: string;
+  viewport?: string;
 }
 
 export default function plugin(options?: AdapterOptions): Adapter;
