@@ -5,6 +5,9 @@
 		"type": "git",
 		"url": "https://github.com/ptkdev/sveltekit-electron-adapter"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"license": "MIT",
 	"homepage": "https://github.com/ptkdev/sveltekit-electron-adapter",
 	"type": "module",
