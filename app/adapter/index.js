@@ -128,13 +128,12 @@ See https://kit.svelte.dev/docs/page-options#prerender for more details`,
 			});
 
 			HTML_assets.forEach(async () => {
-				let regex_input = new RegExp(`[^.](/_app/immutable)`, "g");
-				let regex_replace = `./_app/immutable`;
+				let regex_input = new RegExp(`([^.])(/_app/immutable)`, "g");
 
 				await replace.sync({
 					files: [`${pages}/**/*`],
 					// @ts-ignore
-					processor: (input) => input.replace(regex_input, regex_replace),
+					processor: (input) => input.replace(regex_input, "$1.$2"),
 				});
 			});
 
