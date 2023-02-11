@@ -53,9 +53,9 @@
 		"contributors-generate": "all-contributors generate",
 		"all-shields-generate": "all-shields-generate",
 		"pre-commit": "npm run contributors-generate && npm run all-shields-generate && npm run lint-fix",
-		"pkg-clean": "rm -rf node_modules package-lock.json && npm install && npm install eslint@7 @types/yargs@16 --save-dev && husky install",
+		"pkg-clean": "rm -rf node_modules package-lock.json && npm install && npm install eslint@7 @types/yargs@16 yargs@16 --save-dev && husky install",
 		"pkg-update": "npm update",
-		"pkg-upgrade": "npx --yes npm-check-updates -u && npm install && npm install eslint@7 @types/yargs@16 --save-dev && husky install"
+		"pkg-upgrade": "npx --yes npm-check-updates -u && npm install && npm install eslint@7 @types/yargs@16 yargs@16 --save-dev && husky install"
 	},
 	"dependencies": {
 		"replace-in-file": "^6.3.5",
@@ -89,7 +89,7 @@
 		"typescript-transform-paths": "^3.4.6",
 		"uvu": "^0.5.6",
 		"vite": "^4.1.1",
-		"yargs": "^17.6.2"
+		"yargs": "^16.2.0"
 	},
 	"peerDependencies": {
 		"@sveltejs/kit": "^1.0.0"
