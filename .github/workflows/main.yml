@@ -35,7 +35,7 @@ jobs:
               run: chmod +x ./scripts/changelog_release.sh && ./scripts/changelog_release.sh
             - name: Release snapshot
               id: release-snapshot
-              uses: actions/create-release@latest
+              uses: ncipollo/release-action@v1
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
