@@ -47,13 +47,13 @@
 					"platform": "shields"
 				},
 				{
-					"url": "https://grammy.dev/",
-					"color": "#009dca",
+					"url": "https://kit.svelte.dev/",
+					"color": "#ff531a",
 					"label": "powered by",
-					"message": "grammy",
-					"title": "Framework: Grammy",
+					"message": "sveltekit",
+					"title": "Framework: SvelteKit",
 					"style": "flat",
-					"logo": "telegram",
+					"logo": "svelte",
 					"platform": "shields"
 				},
 				{
