@@ -2,7 +2,7 @@
 	"name": "@ptkdev/sveltekit-electron-adapter",
 	"displayName": "SvelteKit Adapter for Desktop Apps with Electron",
 	"description": "Adapter for SvelteKit apps that prerenders your entire site as a collection of static files for use with Electron",
-	"version": "0.2.2",
+	"version": "0.3.0-beta.1",
 	"main": "./app/adapter/index.js",
 	"type": "module",
 	"exports": {
@@ -12,7 +12,7 @@
 		},
 		"./package.json": "./package.json"
 	},
-	"types": "index.d.ts",
+	"types": "./app/adapter/index.d.ts",
 	"publishConfig": {
 		"access": "public"
 	},
