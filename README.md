@@ -1,6 +1,6 @@
 [![sveltekit-electron-adapter logo](https://raw.githubusercontent.com/ptkdev/sveltekit-electron-adapter/main/.github/assets/logo.png)](https://github.com/ptkdev/sveltekit-electron-adapter)
 
-# 🐘 sveltekit-electron-adapter
+# 🔌 sveltekit-electron-adapter
 
 <!-- all-shields/header-badges:START -->
 
