@@ -39,8 +39,8 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  tag_name: ${{ steps.pkgjson.outputs.pkgversion }}
-                  release_name: v${{ steps.pkgjson.outputs.pkgversion }}
+                  tag: ${{ steps.pkgjson.outputs.pkgversion }}
+                  name: v${{ steps.pkgjson.outputs.pkgversion }}
                   body: |
                       ### CHANGELOG: v${{ steps.pkgjson.outputs.pkgversion }} (${{ steps.date.outputs.date }})${{ steps.changelog.outputs.changelog }}
                   draft: false
