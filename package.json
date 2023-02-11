@@ -3,12 +3,12 @@
 	"displayName": "SvelteKit Adapter for Desktop Apps with Electron",
 	"description": "Adapter for SvelteKit apps that prerenders your entire site as a collection of static files for use with Electron",
 	"version": "0.2.2-nightly.0",
-	"main": "./index.js",
+	"main": "./app/adapter/index.js",
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./index.d.ts",
-			"import": "./index.js"
+			"types": "./app/adapter/index.d.ts",
+			"import": "./app/adapter/index.js"
 		},
 		"./package.json": "./package.json"
 	},
@@ -33,7 +33,7 @@
 		"node": ">=14.0.0"
 	},
 	"scripts": {
-		"build": "cp ./app/**/* . -r",
+		"build": "echo \"Compiling...\"",
 		"release": "npm run build",
 		"test": "jest app",
 		"docs": "git submodule update --recursive && markserv ./README.md",

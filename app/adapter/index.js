@@ -109,7 +109,7 @@ See https://kit.svelte.dev/docs/page-options#prerender for more details`,
 			});
 
 			let regex_input = new RegExp(`http-equiv="content-security-policy" content=""`, "g");
-			const policy = "default-src 'self'; script-src 'self'";
+			const policy = "";
 			let regex_replace = `http-equiv="content-security-policy" content="${
 				options?.policy ? options.policy : policy
 			}"`;

@@ -1,7 +1,5 @@
 **/*
-!/extra/**/*
+!/app/**/*
 !*.d.ts
-!index.js
-!platforms.js
 !*.md
 !*.json

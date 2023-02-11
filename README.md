@@ -57,7 +57,7 @@ import adapter from "@ptkdev/sveltekit-electron-adapter";
 const config = {
 	kit: {
 		adapter: adapter({
-			strict: true,
+			strict: false,
 		}),
 	},
 };
@@ -72,7 +72,7 @@ I make a boilerplate that "automate" this process, but is working in progress: c
 
 ## 🧰 Options
 
-The `adatper({ options })` parameters list:
+The `adapter({ options })` parameters list:
 
 | Parameter   | Description                                                     | Values | Default value                                               | Available since |
 | ----------- | --------------------------------------------------------------- | ------ | ----------------------------------------------------------- | --------------- |
@@ -81,7 +81,7 @@ The `adatper({ options })` parameters list:
 | fallback    | See official [docs](https://kit.svelte.dev/docs/adapter-static) |        |                                                             |                 |
 | precompress | See official [docs](https://kit.svelte.dev/docs/adapter-static) |        |                                                             |                 |
 | strict      | See official [docs](https://kit.svelte.dev/docs/adapter-static) |        |                                                             |                 |
-| policy      | Set meta-tag `content-security-policy`                          | String | `default-src 'self'; script-src 'self'`                     | v0.2.0          |
+| policy      | Set meta-tag `content-security-policy`                          | String | Empty                                                       | v0.2.0          |
 | viewport    | Set meta-tag `viewport`                                         | String | `width=device-width, initial-scale=1.0, viewport-fit=cover` | v0.2.0          |
 
 #### Example:
@@ -90,8 +90,8 @@ The `adatper({ options })` parameters list:
 const config = {
 	kit: {
 		adapter: adapter({
-			strict: true,
-			policy: "",
+			strict: false,
+			policy: "default-src 'self'; script-src 'self'",
 			viewport: `width=device-width`,
 		}),
 	},
