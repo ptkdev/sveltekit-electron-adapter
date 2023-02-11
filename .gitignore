@@ -133,3 +133,6 @@ npm-debug.log
 /app/configs/version.json
 /dist
 /build
+./index.js
+./platforms.js
+./index.d.ts

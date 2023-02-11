@@ -19,7 +19,6 @@ const version = pkg.version.split(".");
 let next_version, patch;
 
 const argv: any = yargs(process.argv.slice(2)).argv;
-console.log(argv.cmd);
 
 switch (argv.cmd) {
 	case "nightly":
