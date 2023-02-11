@@ -2,8 +2,10 @@ import Logger from "@ptkdev/logger";
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
-import semver from "../package.json";
+import semver from "../package.json" assert { type: "json" };
+import { dirname } from "path";
 
+const __dirname = dirname;
 const gitdotfile = `${__dirname}/../.git/config`;
 const logger = new Logger();
 let branch = "";

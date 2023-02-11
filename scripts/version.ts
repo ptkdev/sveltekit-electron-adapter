@@ -11,7 +11,7 @@
 import * as fs from "fs";
 import Logger from "@ptkdev/logger";
 import { argv } from "yargs";
-import pkg from "../package.json";
+import pkg from "../package.json" assert { type: "json" };
 
 const logger = new Logger();
 

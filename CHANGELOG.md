@@ -1,4 +1,4 @@
-# v0.2.0 (February 11, 2023)
+# v0.2.1 (February 11, 2023)
 
 -   New Options: `viewport`
 -   New Options: `policy`

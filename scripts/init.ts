@@ -13,7 +13,9 @@ import * as fs from "fs";
 import * as shell from "shelljs";
 import { argv } from "yargs";
 
-declare const __dirname: string;
+import { dirname } from "path";
+
+const __dirname = dirname;
 console.log(argv, argv._[0]);
 const path = `${__dirname}/../app/configs/config.js`;
 

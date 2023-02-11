@@ -10,8 +10,9 @@
  */
 import * as fs from "fs";
 import * as shell from "shelljs";
+import { dirname } from "path";
 
-declare const __dirname: string;
+const __dirname = dirname;
 
 const path = `${__dirname}/../app/configs/config.js`;
 

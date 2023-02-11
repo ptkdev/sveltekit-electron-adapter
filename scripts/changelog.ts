@@ -10,8 +10,9 @@
  *
  */
 import * as fs from "fs";
+import { dirname } from "path";
 
-declare const __dirname: string;
+const __dirname = dirname;
 
 const changelog = `# v1.0.0 (${new Date().toLocaleString("en-us", {
 	month: "long",

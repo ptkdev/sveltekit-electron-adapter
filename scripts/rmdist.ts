@@ -9,7 +9,9 @@
  *
  */
 import * as shell from "shelljs";
-declare const __dirname: string;
+import { dirname } from "path";
+
+const __dirname = dirname;
 
 const path = `${__dirname}/../dist`;
 
