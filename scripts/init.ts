@@ -11,10 +11,10 @@
  */
 import * as fs from "fs";
 import * as shell from "shelljs";
-import { argv } from "yargs";
+import yargs from "yargs";
 
 import { dirname } from "path";
-
+const argv: any = yargs(process.argv.slice(2)).argv;
 const __dirname = dirname;
 console.log(argv, argv._[0]);
 const path = `${__dirname}/../app/configs/config.js`;
