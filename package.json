@@ -2,7 +2,7 @@
 	"name": "@ptkdev/sveltekit-electron-adapter",
 	"displayName": "SvelteKit Adapter for Desktop Apps with Electron",
 	"description": "Adapter for SvelteKit apps that prerenders your entire site as a collection of static files for use with Electron",
-	"version": "0.3.1-nightly.73",
+	"version": "0.3.1-nightly.74",
 	"main": "./app/adapter/index.js",
 	"type": "module",
 	"exports": {
@@ -70,7 +70,7 @@
 		"@types/yargs": "^17.0.24",
 		"@typescript-eslint/eslint-plugin": "^5.59.1",
 		"@typescript-eslint/parser": "^5.59.1",
-		"all-contributors-cli": "^6.24.0",
+		"all-contributors-cli": "^6.25.0",
 		"eslint": "^7.32.0",
 		"eslint-plugin-jest": "^27.2.1",
 		"eslint-plugin-jsdoc": "^43.1.1",
@@ -88,7 +88,7 @@
 		"typescript": "^5.0.4",
 		"typescript-transform-paths": "^3.4.6",
 		"uvu": "^0.5.6",
-		"vite": "^4.3.2",
+		"vite": "^4.3.3",
 		"yargs": "^17.7.1"
 	},
 	"peerDependencies": {
